@@ -26,16 +26,16 @@ var player = new Clappr.Player({
   },
   markersPlugin: {
     markers: [
-      new ClapprMarkersPlugin.StandardMarker(0, "The beginning!"),
-      new ClapprMarkersPlugin.StandardMarker(90, "Something interesting."),
-      new ClapprMarkersPlugin.StandardMarker(450, "The conclusion.")
+      new ClapprMarkersPlugin.StandardMarker(0, "The beginning!", '#FFFF00'),
+      new ClapprMarkersPlugin.StandardMarker(90, "Something interesting.", '#DEDEDE'),
+      new ClapprMarkersPlugin.StandardMarker(450, "The conclusion.", #E3E3E3)
     ],
     tooltipBottomMargin: 17 // optional
   }
 });
 ```
 
-The first paramater to `StandardMarker` is the time in seconds that the marker represents, and the second is the message to be displayed on the tooltip when the user hovers over the marker, and is optional.
+The first paramater to `StandardMarker` is the time in seconds that the marker represents, he second is the message to be displayed on the tooltip when the user hovers over the marker(optional) and third is the colour of the marker(optional).
 
 The `tooltipBottomMargin` option is optional and specifies the amount of space below tooltips. It defaults to 17.
 
