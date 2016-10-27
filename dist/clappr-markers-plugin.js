@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("Clappr"));
+		module.exports = factory(require("clappr"));
 	else if(typeof define === 'function' && define.amd)
-		define(["Clappr"], factory);
+		define(["clappr"], factory);
 	else if(typeof exports === 'object')
-		exports["ClapprMarkersPlugin"] = factory(require("Clappr"));
+		exports["ClapprMarkersPlugin"] = factory(require("clappr"));
 	else
-		root["ClapprMarkersPlugin"] = factory(root["Clappr"]);
+		root["ClapprMarkersPlugin"] = factory(root["clappr"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
