@@ -33,11 +33,9 @@
     });
 
     var markersPlugin = player.getPlugin('markers-plugin');
-    /*
     setTimeout(function() {
-      markersPlugin.clearMarkers();
-    }, 500);
-    */
+      markersPlugin.addMarker(new ClapprMarkersPlugin.StandardMarker(130, 'hola papi', '#000000'));
+    }, 2000);
     // console.log(markersPlugin.getByIndex(1)); 
   </script>
 </body>

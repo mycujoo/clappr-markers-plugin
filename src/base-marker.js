@@ -48,7 +48,7 @@ export default class BaseMarker extends Marker {
 
   _buildMarkerEl () {
     var $marker = $('<div />').addClass('standard-marker')
-    $marker.append($('<div />').addClass('standard-marker-inner').css('background-color', this._colour))
+    $marker.append($('<div />').addClass('standard-marker-inner').css('border-top', '7px solid ' + this._colour))
     return $marker
   }
 
