@@ -7,30 +7,24 @@
   <script>
 
     var markerInfo = [
-      [0, "Incredible Arial Shots"],
-      [13, "Good Morning Lancaster"],
-      [25, "SugarTV"],
-      [37, "The LA1 Show"],
-      [56, "Soundbooth"],
-      [75, "Jailbreak"],
-      [87, "Charity Showcase"],
-      [96, "Strictly Cha Cha Chat!"],
-      [102, "Roses"],
-      [116, "The Studio!"],
-      [167, "Closing Sequence"]
+      [37, "The LA1 Show", '#EA1A4C'],
+      [96, "Strictly Cha Cha Chat!", '#55ACEE'],
+      [162, "Roses", '#009788'],
     ];
 
     var markers = [];
 
     for(var i=0; i<markerInfo.length; i++) {
       var info = markerInfo[i];
-      markers.push(new ClapprMarkersPlugin.StandardMarker(info[0], info[1]));
+      markers.push(new ClapprMarkersPlugin.StandardMarker(info[0], info[1], info[2]));
     }
 
     var player = new Clappr.Player({
-    	source: "http://tjenkinson.me/clappr-thumbnails-plugin/assets/video.mp4",
-    	parentId: "#player",
-    	plugins: {
+      source: "http://tjenkinson.me/clappr-thumbnails-plugin/assets/video.mp4",
+      parentId: "#player",
+      hideMediaControl: false,
+      autoPlay: true,
+      plugins: {
         core: [ClapprMarkersPlugin],
       },
       markersPlugin: {

@@ -166,7 +166,7 @@ export default class MarkersPlugin extends UICorePlugin {
     markers.forEach((a) => {
       this._markers.push(this._buildInternalMarker(a))
     })
-    
+
     // append the marker elements to the dom
     this._markers.forEach((marker) => {
       this._createMarkerEl(marker)
@@ -177,6 +177,7 @@ export default class MarkersPlugin extends UICorePlugin {
   _createMarkerEl(marker) {
     // marker
     var $marker = marker.$marker
+
     marker.timeChangedHandler = () => {
       // fired from marker if it's time changes
       this._updateMarkerTime(marker)

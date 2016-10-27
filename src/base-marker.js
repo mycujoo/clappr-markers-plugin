@@ -4,9 +4,10 @@ import Marker from './marker'
 
 export default class BaseMarker extends Marker {
 
-  constructor (time) {
+  constructor (time, colour) {
     super()
     this._time = time
+    this._colour = colour
     this._$marker = this._buildMarkerEl()
     this._$tooltip = null
   }
@@ -47,7 +48,7 @@ export default class BaseMarker extends Marker {
 
   _buildMarkerEl () {
     var $marker = $('<div />').addClass('standard-marker')
-    $marker.append($('<div />').addClass('standard-marker-inner'))
+    $marker.append($('<div />').addClass('standard-marker-inner').css('background-color', this._colour))
     return $marker
   }
 
